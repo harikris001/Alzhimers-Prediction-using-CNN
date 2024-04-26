@@ -76,7 +76,7 @@ class_names= ['Mild Dementia', 'Moderate Dementia', 'Non Dementia', 'Very MildDe
 
 
 
-st.header('AlzhCare - Alzhimers Help Assistance')
+st.header("AlzhCare - Alzheimer's Help Assistance")
 st.image('https://www.drugwatch.com/wp-content/uploads/progression-alzheimers-disease.png')
 st.write("Alzheimer’s disease is the most common type of dementia. It is a progressive disease beginning with mild memory loss and possibly leading to loss of the ability to carry on a conversation and respond to the environment. It can seriously affect a person’s ability to carry out daily activities.")
 st.markdown('#### You are not alone we are here to assist you.')
@@ -91,7 +91,7 @@ with st.sidebar:
     st.write('Valid Accuracy of different Models:')
     st.write('CNN Augmented : 97.8%')
     st.write('CNN Conv : 92.3%')
-    st.download_button("Download APP",data="https://drive.google.com/file/d/1uQvQzj2yUwN8V5rRd8JqB4mY4f0aM9IY/view?usp=sharing",file_name="AlzhCareApp.apk")
+    st.download_button("Download APP",data="app-release.apk",file_name="AlzhCareApp.apk")
 
 if selection == 'CNN Augmented':
     st.sidebar.image('https://miro.medium.com/v2/resize:fit:1400/0*tH9evuOFqk8F41FG.png')
