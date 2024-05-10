@@ -68,10 +68,15 @@ def predict(model, image):
         image = image.unsqueeze(0)  # Add batch dimension
         outputs = model(image)
         _, predicted = torch.max(outputs, 1)
-        return predicted
+        conf = F.softmax(outputs, dim=1)[0][predicted]
+        if conf > 0.9:
+            return predicted
+        else:
+            return torch.tensor([4])
 
 
-class_names= ['Mild Dementia', 'Moderate Dementia', 'Non Dementia', 'Very MildDementia']
+
+class_names= ['Mild Dementia', 'Moderate Dementia', 'Non Dementia', 'Very MildDementia', 'No MRI Detected']
 
 
 
